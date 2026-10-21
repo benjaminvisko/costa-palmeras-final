@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accesorios | Costa Palmeras</title>
+  <meta name="description" content="Armá tu pedido de accesorios para piscina y consultalo por WhatsApp.">
+  <meta name="theme-color" content="#062B1B">
+  <link rel="icon" href="./images/logopalmeras.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="./js/cart-tailwind-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  
+<link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+  <!-- ========== HEADER: carrito (ícono + contador) y secciones ========== -->
+  <header class="cart-header sticky top-0 z-30 border-b shadow-sm backdrop-blur">
+    <div class="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-4 px-5 pb-2 pt-3 sm:px-8">
+      <div class="flex items-center gap-4">
+        <a class="header-link hidden text-sm font-medium sm:inline" href="servicios.html">Servicios</a>
+      </div>
+      <a href="index.html" class="flex shrink-0 items-center justify-self-center" aria-label="Costa Palmeras, inicio">
+        <img src="./images/cropped-logo-horizontal-350x66.png" alt="Costa Palmeras" class="cart-logo h-9 w-auto sm:h-11" onerror="this.style.display='none'">
+      </a>
+      <div class="flex items-center justify-end gap-4">
+        <a class="header-link hidden text-sm font-medium sm:inline" href="index.html#contacto">Contacto</a>
+        <a href="miobra.html" data-session-link class="hidden rounded-full bg-gradient-to-r from-gold-soft to-gold px-5 py-3 text-sm font-semibold text-night-900 shadow-md transition hover:-translate-y-0.5 md:inline-flex">Iniciar sesión</a>
+      </div>
+    </div>
+    <!-- Secciones: siempre visibles arriba de todo -->
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div id="catTabs" class="no-scrollbar flex gap-2 overflow-x-auto py-2.5" role="tablist" aria-label="Secciones de productos"></div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-5 pb-20 pt-6 sm:px-8">
+    <div class="mb-5 flex flex-wrap items-end justify-between gap-x-6 gap-y-1">
+      <h1 id="catTitle" class="text-4xl font-semibold leading-tight sm:text-5xl"></h1>
+      <p id="catCount" class="text-sm text-night-700/70"></p>
+    </div>
+    <div id="catalog" role="tabpanel" class="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4"></div>
+    <p class="mt-8 text-xs text-night-700/70">Precios orientativos en pesos argentinos, sujetos a confirmación al cotizar.</p>
+  </main>
+
+  <footer class="bg-night-900 py-7 text-white/70">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 text-sm sm:px-8">
+      <a href="./index.html#inicio" class="font-semibold text-white">Costa Palmeras</a>
+      <span>&copy; 2026 Costa Palmeras · Rojas, Buenos Aires</span>
+      <a href="./index.html#amenidades" class="hover:text-gold-soft">Accesorios</a>
+    </div>
+  </footer>
+
+  <!-- ========== PANEL LATERAL DEL CARRITO ========== -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+    <div class="flex items-start justify-between gap-3 border-b border-teal-deep/15 px-5 py-4 sm:px-6">
+      <div>
+        <h2 id="drawerTitle" class="text-3xl font-semibold text-teal-deep">Tu carrito</h2>
+        <p class="mt-0.5 text-sm text-night-700/70" id="cartCount" aria-live="polite">0 productos</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="clearCart" type="button" class="text-sm font-semibold text-teal-deep hover:underline" hidden>Vaciar</button>
+        <button id="closeCart" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-teal-deep/30 text-teal-deep transition hover:bg-teal-deep hover:text-white" aria-label="Cerrar carrito"><i data-lucide="x" class="h-5 w-5"></i></button>
+      </div>
+    </div>
+
+    <div id="cartItems" class="flex-1 space-y-5 overflow-y-auto px-5 py-5 sm:px-6" aria-live="polite"></div>
+
+    <div class="border-t border-teal-deep/15 bg-white px-5 py-5 sm:px-6">
+      <p class="text-sm font-semibold text-night-700">Subtotales estimados</p>
+      <div class="mt-1 space-y-0.5 text-right">
+        <p class="font-display text-3xl font-semibold text-night-900" id="cartTotalARS">ARS $ 0</p>
+      </div>
+      <p id="cartPriceNotice" class="mt-2 text-xs font-medium text-night-700/75" hidden>Hay productos sin precio publicado; se confirmará su cotización por WhatsApp.</p>
+      <p class="mt-1 text-xs text-night-700/70">Todos los precios están expresados en pesos argentinos y son orientativos.</p>
+      <button id="checkout" type="button" class="btn-gold mt-4 w-full" disabled><i data-lucide="message-circle" class="h-5 w-5"></i> Consultar pedido por WhatsApp</button>
+      <button id="keepShopping" type="button" class="btn-outline mt-2.5 w-full">Seguir agregando</button>
+    </div>
+  </aside>
+
+  <div id="floatingCart" class="cart-floating">
+    <button type="button" id="openCartFloating" class="cart-floating-btn" aria-label="Abrir carrito" aria-haspopup="dialog" aria-controls="cartDrawer">
+      <i data-lucide="shopping-cart" class="h-5 w-5"></i>
+      <span class="cart-badge" id="cartBadge" hidden>0</span>
+      <span id="floatingCartCount" class="sr-only" aria-live="polite">0 productos</span>
+    </button>
+  </div>
+
+  <div id="productDetailOverlay" class="product-detail-overlay" aria-hidden="true">
+    <section id="productDetail" class="product-detail" role="dialog" aria-modal="true" aria-labelledby="detailTitle" tabindex="-1">
+      <div class="flex items-center justify-between gap-4 border-b border-teal-deep/15 px-5 py-4 sm:px-7">
+        <div>
+          <p id="detailCategory" class="text-xs font-semibold uppercase tracking-wide text-teal-deep"></p>
+          <h2 id="detailTitle" class="text-2xl font-semibold text-teal-deep sm:text-3xl"></h2>
+        </div>
+        <button type="button" id="closeProductDetail" class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-teal-deep/30 text-teal-deep hover:bg-teal-deep hover:text-white" aria-label="Cerrar detalle"><i data-lucide="x" class="h-5 w-5"></i></button>
+      </div>
+      <div class="grid gap-5 p-5 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-7 md:p-7">
+        <div>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-wide text-teal-deep">Imágenes del producto</p>
+          <div id="detailGallery" class="detail-gallery"></div>
+        </div>
+        <div class="flex flex-col">
+          <p id="detailPrice" class="font-display text-3xl font-semibold text-night-900"></p>
+          <p id="detailPriceNote" class="mt-2 text-sm text-night-700/75"></p>
+          <p id="detailDescription" class="mt-4 text-sm leading-relaxed text-night-700/85"></p>
+          <div id="detailSpecs" class="mt-5"></div>
+          <details id="detailSpares" class="detail-spares mt-5"></details>
+          <div class="detail-actions mt-auto">
+            <button type="button" id="detailAdd" class="btn-gold w-full"><i data-lucide="plus" class="h-5 w-5"></i> Agregar al pedido</button>
+            <a id="detailWhatsApp" class="btn-outline w-full" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle" class="h-5 w-5"></i> Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="imageZoomOverlay" class="image-zoom-overlay" role="dialog" aria-modal="true" aria-label="Imagen ampliada del producto" aria-hidden="true">
+    <button type="button" id="closeImageZoom" class="image-zoom-close" aria-label="Cerrar imagen ampliada"><i data-lucide="x" class="h-6 w-6"></i></button>
+    <button type="button" id="previousZoomImage" class="image-zoom-nav image-zoom-prev" aria-label="Ver imagen anterior"><i data-lucide="chevron-left" class="h-7 w-7"></i></button>
+    <div class="image-zoom-content">
+      <img id="imageZoom" alt="">
+    </div>
+    <button type="button" id="nextZoomImage" class="image-zoom-nav image-zoom-next" aria-label="Ver imagen siguiente"><i data-lucide="chevron-right" class="h-7 w-7"></i></button>
+    <p id="imageZoomCount" class="image-zoom-count" aria-live="polite"></p>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./js/cart-page.js"></script>
+  <script src="./js/header-session.js"></script>
+  <script src="./js/cookie-consent.js" defer></script>
+</body>
+</html>

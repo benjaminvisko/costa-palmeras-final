@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios y accesorios | Costa Palmeras</title>
+  <meta name="description" content="Conocé iluminación LED, ionizadores, ablandadores electrónicos y calderas eléctricas para tu piscina.">
+  <meta name="theme-color" content="#FAF6F0">
+  <link rel="icon" href="./images/logopalmeras.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="./js/services-tailwind-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+  
+<link rel="stylesheet" href="./css/services.css">
+</head>
+<body>
+  <header class="sticky top-0 z-30 border-b border-teal-deep/15 bg-sand-50/95 shadow-sm backdrop-blur">
+    <div class="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-4 px-5 py-4 sm:px-8 xl:gap-5">
+      <nav class="hidden items-center justify-end gap-3 xl:flex 2xl:gap-5" aria-label="Navegación izquierda">
+        <a class="text-sm font-medium text-teal-deep transition hover:text-night-900" href="index.html#inicio">Inicio</a>
+        <a class="text-sm font-medium text-teal-deep transition hover:text-night-900" href="nosotros.html">Nosotros</a>
+      </nav>
+      <a href="index.html" class="flex shrink-0 items-center xl:justify-self-center" aria-label="Costa Palmeras, inicio">
+        <img src="./images/cropped-logo-horizontal-350x66.png" alt="Costa Palmeras" class="h-9 w-auto sm:h-11" onerror="this.style.display='none'">
+      </a>
+      <div class="flex items-center justify-end gap-3 xl:justify-between xl:gap-5">
+        <nav class="hidden items-center gap-3 xl:flex 2xl:gap-5" aria-label="Navegación derecha">
+          <a class="text-sm font-medium text-teal-deep transition hover:text-night-900" href="index.html#contacto">Contacto</a>
+        </nav>
+        <a href="miobra.html" data-session-link class="hidden rounded-full bg-gradient-to-r from-gold-soft to-gold px-5 py-3 text-sm font-semibold text-night-900 shadow-md transition hover:-translate-y-0.5 sm:inline-flex">Iniciar sesión</a>
+        <button id="burger" class="p-2 text-teal-deep xl:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i data-lucide="menu" class="h-6 w-6"></i></button>
+      </div>
+    </div>
+    <div id="drawer" class="hidden border-t border-teal-deep/15 bg-sand-50 xl:hidden">
+      <nav class="flex flex-col gap-4 px-6 py-5" aria-label="Menú móvil">
+        <a class="text-night-700" href="index.html#inicio">Inicio</a>
+        <a class="text-night-700" href="nosotros.html">Nosotros</a>
+        <a class="text-night-700" href="index.html#contacto">Contacto</a>
+        <a class="btn-gold mt-1 w-fit" href="miobra.html" data-session-link>Iniciar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-7xl px-5 pb-10 pt-16 sm:px-8 sm:pt-20">
+      <p class="text-sm font-semibold uppercase text-teal-deep">Costa Palmeras · Servicios</p>
+      <h1 class="mt-3 max-w-3xl text-5xl font-semibold leading-tight sm:text-6xl">Más formas de disfrutar tu pileta</h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-night-700/80">Explorá nuestros servicios para completar tu proyecto, cuidar tu piscina y disfrutarla por más tiempo.</p>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-5 pb-20 pt-4 sm:px-8" aria-label="Más servicios para piscinas">
+      <div class="service-tabs mb-6" role="tablist" aria-label="Categorías de servicios">
+        <button class="service-tab" id="tab-accesorios" type="button" role="tab" aria-selected="true" aria-controls="panel-accesorios" tabindex="0" data-service-tab="accesorios">Accesorios</button>
+        <button class="service-tab" id="tab-revestimientos" type="button" role="tab" aria-selected="false" aria-controls="panel-revestimientos" tabindex="-1" data-service-tab="revestimientos">Revestimientos</button>
+        <button class="service-tab" id="tab-reformas" type="button" role="tab" aria-selected="false" aria-controls="panel-reformas" tabindex="-1" data-service-tab="reformas">Reparaciones y Reformas</button>
+        <button class="service-tab" id="tab-postventa" type="button" role="tab" aria-selected="false" aria-controls="panel-postventa" tabindex="-1" data-service-tab="postventa">Postventa</button>
+      </div>
+
+      <div class="service-shell rounded-2xl p-4 sm:p-5">
+        <div class="service-panel space-y-5" id="panel-accesorios" role="tabpanel" aria-labelledby="tab-accesorios" data-service-panel="accesorios" tabindex="0">
+          <article class="service-card grid overflow-hidden rounded-2xl md:grid-cols-[.82fr_1.18fr]">
+            <img class="service-image w-full" src="./images/Piscina azul bajo palmeras nocturnas.png" alt="Piscina iluminada con luces LED durante la noche" loading="lazy" onerror="this.onerror=null;this.src='./images/3-r6drh9wai3jbusg0ssw490w6aup1zk6fauwk1zytvg.jpg'">
+            <div class="service-copy">
+              <h2 class="font-semibold text-teal-deep">Iluminación LED</h2>
+              <p class="mt-3 max-w-xl text-night-700/80">Transformá la piscina en el centro de tus noches al aire libre. La iluminación LED realza sus formas, mejora la visibilidad y crea el ambiente ideal para compartir, con bajo consumo y larga duración.</p>
+              <a class="btn-outline mt-5" href="carrito.html?add=led-4110">Cotizar <i data-lucide="shopping-cart" class="h-4 w-4"></i></a>
+            </div>
+          </article>
+
+          <article class="service-card grid overflow-hidden rounded-2xl md:grid-cols-[.82fr_1.18fr]">
+            <img class="service-image w-full" src="./images/lonizador.jpg" alt="Equipo ionizador para el tratamiento del agua de piscina" loading="lazy">
+            <div class="service-copy">
+              <h2 class="font-semibold text-teal-deep">Ionizador</h2>
+              <p class="mt-3 max-w-xl text-night-700/80">El ionizador es un dispositivo que se incorpora al sistema de filtrado de la pileta y funciona mediante una tecnología que libera iones metálicos, principalmente de cobre y plata, en el agua. Estos iones actúan como agentes desinfectantes naturales, eliminando bacterias, virus y algas de manera eficaz y continua.</p>
+              <p class="mt-4 max-w-xl text-night-700/80">A diferencia de los métodos tradicionales que dependen exclusivamente del cloro, el ionizador permite reducir significativamente el uso de productos químicos, haciendo que el agua sea más saludable, suave para la piel, no irritante para los ojos y libre de olores fuertes. Además, contribuye a mantener el agua cristalina durante más tiempo y requiere menos mantenimiento.</p>
+              <p class="mt-4 max-w-xl text-night-700/80">Este sistema es ideal para quienes buscan una alternativa más natural y sustentable para el cuidado del agua, sin resignar calidad ni seguridad.</p>
+              <a class="btn-outline mt-5" href="carrito.html?add=ionizador-eco">Cotizar <i data-lucide="shopping-cart" class="h-4 w-4"></i></a>
+            </div>
+          </article>
+
+          <article class="service-card grid overflow-hidden rounded-2xl md:grid-cols-[.82fr_1.18fr]">
+            <img class="service-image w-full" src="./images/ablandador.jpg" alt="Ablandador electrónico para tratar agua dura en piscinas" loading="lazy">
+            <div class="service-copy">
+              <h2 class="font-semibold text-teal-deep">Ablandador electrónico</h2>
+              <p class="mt-3 max-w-xl text-night-700/80">Es un dispositivo que se instala en la cañería de ingreso de agua a la pileta y tiene como función principal tratar el agua dura, es decir, aquella con alto contenido de minerales como calcio y magnesio. A través de impulsos electrónicos, este sistema modifica la estructura de estos minerales para que no se adhieran a las superficies ni se acumulen en el sistema de filtrado.</p>
+              <p class="mt-4 max-w-xl text-night-700/80">El uso del ablandador electrónico previene la formación de sarro en cañerías, bombas y revestimientos, prolongando la vida útil de todos los componentes de la pileta. Además, ayuda a mantener el agua más limpia, evita manchas en las superficies y mejora la eficiencia del filtrado.</p>
+              <p class="mt-4 max-w-xl text-night-700/80">Es una solución efectiva, sin uso de productos químicos ni necesidad de mantenimiento constante, ideal para quienes buscan cuidar su pileta a largo plazo y reducir problemas asociados al agua dura.</p>
+              <a class="btn-outline mt-5" href="carrito.html?add=ablandador-electronico">Cotizar <i data-lucide="shopping-cart" class="h-4 w-4"></i></a>
+            </div>
+          </article>
+
+          <article class="service-card grid overflow-hidden rounded-2xl md:grid-cols-[.82fr_1.18fr]">
+            <img class="service-image w-full" src="./images/3-r6drh9wai3jbusg0ssw490w6aup1zk6fauwk1zytvg.jpg" alt="Imagen ilustrativa de caldera eléctrica para piscina" loading="lazy">
+            <div class="service-copy">
+              <h2 class="font-semibold text-teal-deep">Caldera eléctrica</h2>
+              <p class="mt-3 max-w-xl text-night-700/80">La caldera eléctrica es un equipo que se conecta al sistema de filtrado de la pileta y permite climatizar el agua, elevando y manteniendo la temperatura deseada durante todo el año. Funciona mediante resistencias internas que calientan el agua al pasar por el equipo, de forma silenciosa, segura y sin emisiones.</p>
+              <p class="mt-4 max-w-xl text-night-700/80">Este sistema es ideal para quienes buscan disfrutar de su pileta incluso en los días más frescos, extendiendo la temporada de uso mucho más allá del verano. La caldera eléctrica es fácil de instalar, no requiere mantenimiento constante y permite un control preciso de la temperatura, adaptándose al confort de cada usuario.</p>
+              <p class="mt-4 max-w-xl text-night-700/80">Además, es una excelente opción para piletas residenciales, spas o instalaciones que valoran la comodidad sin necesidad de usar gas ni combustibles.</p>
+              <a class="btn-outline mt-5" href="carrito.html?add=caldera-tameco-cp30">Cotizar <i data-lucide="shopping-cart" class="h-4 w-4"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="service-panel hidden" id="panel-revestimientos" role="tabpanel" aria-labelledby="tab-revestimientos" data-service-panel="revestimientos" tabindex="0" hidden>
+          <div class="mb-6 max-w-4xl space-y-4 text-night-700/80">
+            <p class="text-lg leading-relaxed">¿Sabías que el revestimiento de tu piscina no solo mejora su apariencia, sino que también protege la estructura y alarga su vida útil? A diferencia de la pintura, que requiere mantenimiento constante y retoques periódicos, los revestimientos ofrecen una solución duradera y de bajo mantenimiento. Esto significa menos trabajo para ti y más tiempo para disfrutar de tu piscina.</p>
+            <p class="text-lg leading-relaxed">En Costa Palmeras, ofrecemos una variedad de opciones para que encuentres el revestimiento ideal según tus necesidades y estilo.</p>
+          </div>
+          <div class="coating-grid">
+            <article class="service-card coating-card overflow-hidden rounded-2xl">
+              <div class="product-gallery" data-product-gallery aria-label="Fotos de revestimiento Simil Bali">
+                <div class="product-gallery-track">
+                  <img src="./images/SIMIL%20BALI1.webp" alt="Revestimiento Simil Bali en piscina residencial" loading="lazy">
+                  <img src="./images/SIMIL%20BALI2.webp" alt="Detalle del revestimiento Simil Bali en una piscina" loading="lazy">
+                  <img src="./images/SIMIL%20BALI3.webp" alt="Piscina con revestimiento Simil Bali y escalones" loading="lazy">
+                </div>
+                <button class="product-gallery-arrow prev" type="button" aria-label="Foto anterior de Simil Bali" data-gallery-prev><i data-lucide="chevron-left" class="h-5 w-5"></i></button>
+                <button class="product-gallery-arrow next" type="button" aria-label="Foto siguiente de Simil Bali" data-gallery-next><i data-lucide="chevron-right" class="h-5 w-5"></i></button>
+                <span class="product-gallery-count" aria-live="polite">1 / 3</span>
+              </div>
+              <div class="service-copy">
+                <h2 class="font-semibold text-teal-deep">Simil Bali</h2>
+                <p class="mt-3 max-w-xl text-night-700/80">Revestimiento con textura rústica que hace alusión a espacios naturales por su tonalidad verde como los contrastes del mar. Crea ambientes tranquilos y llenos de personalidad. Este revestimiento es una apuesta segura para generar ambientes exclusivos. Es antideslizante, requiere poco mantenimiento y es térmicamente estable. Tiene un tamaño por pieza de 10x10 cm, y su presentación es en malla de 30x40 cm. Viene en tres colores: verde, azul y gris.</p>
+              </div>
+            </article>
+
+            <article class="service-card coating-card overflow-hidden rounded-2xl">
+              <div class="product-gallery" data-product-gallery aria-label="Fotos de Piedra Bali">
+                <div class="product-gallery-track">
+                  <img src="./images/piedrabali1.webp" alt="Piedra Bali en el interior de una piscina" loading="lazy">
+                  <img src="./images/piedrabali2.webp" alt="Piscina revestida con Piedra Bali" loading="lazy">
+                  <img src="./images/piedrabali3.webp" alt="Detalle de terminación con Piedra Bali en piscina" loading="lazy">
+                </div>
+                <button class="product-gallery-arrow prev" type="button" aria-label="Foto anterior de Piedra Bali" data-gallery-prev><i data-lucide="chevron-left" class="h-5 w-5"></i></button>
+                <button class="product-gallery-arrow next" type="button" aria-label="Foto siguiente de Piedra Bali" data-gallery-next><i data-lucide="chevron-right" class="h-5 w-5"></i></button>
+                <span class="product-gallery-count" aria-live="polite">1 / 3</span>
+              </div>
+              <div class="service-copy">
+                <h2 class="font-semibold text-teal-deep">Piedra Bali</h2>
+                <p class="mt-3 max-w-xl text-night-700/80">Piedra exótica originaria de Indonesia que contiene propiedades tónicas utilizadas para purificar el agua. Tiene un tamaño por pieza de 10x10 cm. Su color, de un tono verdoso que se torna esmeralda bajo el agua, crea espacios de una singular naturalidad y belleza.</p>
+              </div>
+            </article>
+
+            <article class="service-card coating-card overflow-hidden rounded-2xl">
+              <div class="product-gallery" data-product-gallery aria-label="Fotos de Venecitas Vítreas">
+                <div class="product-gallery-track">
+                  <img src="./images/vinecitas1.webp" alt="Venecitas vítreas en una piscina" loading="lazy">
+                  <img src="./images/VENECITAS2VITREAS.webp" alt="Detalle de mosaicos de venecitas vítreas" loading="lazy">
+                  <img src="./images/VENECITASVITREAS3.webp" alt="Revestimiento de venecitas vítreas en piscina" loading="lazy">
+                </div>
+                <button class="product-gallery-arrow prev" type="button" aria-label="Foto anterior de Venecitas Vítreas" data-gallery-prev><i data-lucide="chevron-left" class="h-5 w-5"></i></button>
+                <button class="product-gallery-arrow next" type="button" aria-label="Foto siguiente de Venecitas Vítreas" data-gallery-next><i data-lucide="chevron-right" class="h-5 w-5"></i></button>
+                <span class="product-gallery-count" aria-live="polite">1 / 3</span>
+              </div>
+              <div class="service-copy">
+                <h2 class="font-semibold text-teal-deep">Venecitas Vítreas</h2>
+                <p class="mt-3 max-w-xl text-night-700/80">Revestimiento veneciano formato 2x2 cm importado, en vidrio fundido a 1.400 °C. Posee excelente resistencia a la humedad, cambios de temperatura y productos químicos. Su color se mantiene inalterable con el tiempo y la luz solar. (Consultar catálogo, diseños y disponibilidad de colores).</p>
+                <p class="mt-4 rounded-xl border border-teal-deep/15 bg-teal-deep/5 p-4 text-sm leading-relaxed text-night-700/90"><strong class="text-teal-deep">Black Lava:</strong> También contamos con piedra volcánica Black Lava (tonalidades negras) traída de los volcanes de Asia, con propiedades y texturas ideales para acabados exclusivos.</p>
+              </div>
+            </article>
+
+            <article class="service-card coating-card overflow-hidden rounded-2xl">
+              <div class="product-gallery" data-product-gallery aria-label="Fotos de Venecitas de Polipropileno">
+                <div class="product-gallery-track">
+                  <img src="./images/VVENECITASPOLI1.webp" alt="Piscina revestida con venecitas de polipropileno" loading="lazy">
+                  <img src="./images/venecitasPOLI2.webp" alt="Detalle de venecitas de polipropileno en piscina" loading="lazy">
+                </div>
+                <button class="product-gallery-arrow prev" type="button" aria-label="Foto anterior de Venecitas de Polipropileno" data-gallery-prev><i data-lucide="chevron-left" class="h-5 w-5"></i></button>
+                <button class="product-gallery-arrow next" type="button" aria-label="Foto siguiente de Venecitas de Polipropileno" data-gallery-next><i data-lucide="chevron-right" class="h-5 w-5"></i></button>
+                <span class="product-gallery-count" aria-live="polite">1 / 2</span>
+              </div>
+              <div class="service-copy">
+                <h2 class="font-semibold text-teal-deep">Venecitas de Polipropileno</h2>
+                <p class="mt-3 max-w-xl text-night-700/80">Revestimiento veneciano nacional de polipropileno. Destaca por ser excelente aislante térmico y acústico, de colocación rápida y sencilla, 100% reciclable, liviano, flexible, ignífugo, antideslizante y altamente resistente a la intemperie, rayos UV y químicos. (Consultar catálogo, diseños y disponibilidad de colores).</p>
+              </div>
+            </article>
+
+            <article class="service-card coating-card overflow-hidden rounded-2xl">
+              <div class="product-gallery" data-product-gallery aria-label="Fotos de Cementicio Marmolite">
+                <div class="product-gallery-track">
+                  <img src="./images/marmolite1.webp" alt="Piscina terminada con revestimiento Cementicio Marmolite" loading="lazy">
+                  <img src="./images/MARMOLITE2.webp" alt="Piscina con acabado Cementicio Marmolite claro" loading="lazy">
+                  <img src="./images/MARMOLITE3.webp" alt="Detalle de piscina revestida con Cementicio Marmolite" loading="lazy">
+                </div>
+                <button class="product-gallery-arrow prev" type="button" aria-label="Foto anterior de Cementicio Marmolite" data-gallery-prev><i data-lucide="chevron-left" class="h-5 w-5"></i></button>
+                <button class="product-gallery-arrow next" type="button" aria-label="Foto siguiente de Cementicio Marmolite" data-gallery-next><i data-lucide="chevron-right" class="h-5 w-5"></i></button>
+                <span class="product-gallery-count" aria-live="polite">1 / 3</span>
+              </div>
+              <div class="service-copy">
+                <h2 class="font-semibold text-teal-deep">Cementicio Marmolite</h2>
+                <p class="mt-3 max-w-xl text-night-700/80">Revestimiento que permite lograr superficies completamente impermeables, de fácil aplicación y bajísimo mantenimiento. Brinda un aspecto natural que armoniza la piscina con el entorno. Es antideslizante (sin raspar), de alta durabilidad sin decolorar y permite restaurar piscinas de forma rápida y limpia.</p>
+                <p class="mt-4 rounded-xl border border-teal-deep/15 bg-teal-deep/5 p-4 text-sm leading-relaxed text-night-700/90"><strong class="text-teal-deep">Variantes de color:</strong> Blanco seda, blanco granito, cielo, marfil, arena, verde esmeralda, turquesa, negro noche, índigo. (Consultar disponibilidad).</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="service-panel hidden" id="panel-reformas" role="tabpanel" aria-labelledby="tab-reformas" data-service-panel="reformas" tabindex="0" hidden>
+          <article class="service-card grid overflow-hidden rounded-2xl md:grid-cols-[.82fr_1.18fr]">
+            <div class="service-placeholder reforms w-full" role="img" aria-label="Imagen ilustrativa de reparaciones y reformas de piscinas">
+              <i data-lucide="wrench" aria-hidden="true"></i>
+            </div>
+            <div class="service-copy">
+              <h2 class="font-semibold text-teal-deep">Reparaciones y Reformas</h2>
+              <p class="mt-3 max-w-xl text-night-700/80">Con el tiempo, las piscinas pueden desgastarse o necesitar mejoras para seguir ofreciendo seguridad, eficiencia y estética. Nuestros servicios de reformas y reparaciones están diseñados para que disfrutes de una piscina como nueva, sin complicaciones.</p>
+              <a class="btn-outline mt-5" href="index.html#contacto">Consultar por reformas <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="service-panel hidden" id="panel-postventa" role="tabpanel" aria-labelledby="tab-postventa" data-service-panel="postventa" tabindex="0" hidden>
+          <article class="service-card grid overflow-hidden rounded-2xl md:grid-cols-[.82fr_1.18fr]">
+            <div class="service-placeholder postventa w-full" role="img" aria-label="Imagen ilustrativa del servicio de postventa">
+              <i data-lucide="life-buoy" aria-hidden="true"></i>
+            </div>
+            <div class="service-copy">
+              <h2 class="font-semibold text-teal-deep">Servicio de Postventa</h2>
+              <p class="mt-3 max-w-xl text-night-700/80">Nuestro servicio de postventa es una muestra de nuestro compromiso a largo plazo con la satisfacción de nuestros clientes. Entendemos que la tranquilidad y confianza son fundamentales para disfrutar plenamente de su piscina, por lo que garantizamos una asistencia integral en caso de cualquier eventualidad.</p>
+              <a class="btn-outline mt-5" href="index.html#contacto">Contactar a soporte <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-5 py-14 text-center sm:px-8">
+      <h2 class="text-3xl font-semibold sm:text-4xl">¿Querés sumar alguno de estos servicios?</h2>
+      <a class="btn-gold mt-6" href="index.html#contacto"><i data-lucide="message-circle" class="h-5 w-5"></i> Consultar por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer class="bg-night-900 py-7 text-white/70">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 text-sm sm:px-8">
+      <a href="index.html#inicio" class="font-semibold text-white">Costa Palmeras</a>
+      <span>&copy; 2026 Costa Palmeras · Rojas, Buenos Aires</span>
+      <a href="index.html#amenidades" class="hover:text-gold-soft">Accesorios</a>
+    </div>
+  </footer>
+  <script src="./js/services-page.js"></script>
+  <script src="./js/header-session.js"></script>
+  <script src="./js/cookie-consent.js" defer></script>
+</body>
+</html>

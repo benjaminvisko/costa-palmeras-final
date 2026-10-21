@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#064432">
+<meta name="robots" content="noindex">
+<link rel="icon" href="./images/logopalmeras.png">
+<title>Portal de obras | Costa Palmeras</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/client-portal.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v6M14 11v6"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></symbol>
+<symbol id="i-split" viewBox="0 0 24 24"><path d="M12 3v7M12 10L5 21M12 10l7 11M8 6l4-4 4 4"/></symbol>
+<symbol id="i-merge" viewBox="0 0 24 24"><path d="M7 3v5a5 5 0 005 5 5 5 0 005-5V3M12 13v8M9 18l3 3 3-3"/></symbol>
+<symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a1 1 0 01-1-1v-6a2 2 0 012-2h14a2 2 0 012 2v6a1 1 0 01-1 1h-2M7 14h10v7H7z"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8M10.3 21a2 2 0 003.4 0"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></symbol>
+<symbol id="i-undo" viewBox="0 0 24 24"><path d="M3 7v6h6M3 13a9 9 0 109-9 9 9 0 00-6.7 3"/></symbol>
+<symbol id="i-grip" viewBox="0 0 24 24"><path d="M9 5h.01M9 12h.01M9 19h.01M15 5h.01M15 12h.01M15 19h.01" stroke-width="3.2"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><path d="M3 5h18v16H3zM3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 22V4M4 4h13l-2 4 2 4H4"/></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6a2 2 0 012-2h4l2 3h8a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21a8 8 0 10-16 0M12 11a4 4 0 100-8 4 4 0 000 8"/></symbol>
+<symbol id="i-send"viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="m18 6-12 12M6 6l12 12"/></symbol>
+</defs></svg>
+
+<header id="nav"><div class="hd">
+  <nav class="site-nav-left" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="carrito.html">Productos</a></nav>
+  <a class="logo" href="index.html" aria-label="Costa Palmeras, inicio"><img src="images/cropped-logo-horizontal-350x66.png" alt="Costa Palmeras"></a>
+  <nav class="site-nav-right" aria-label="Cuenta y portal"><a href="#/mi-obra" class="who" id="who" aria-label="Abrir perfil y Mi obra" hidden></a><a href="#/login" id="nl1">Ingresar</a><a href="#/registro" id="nl2">Crear cuenta</a><a href="#" id="out" hidden>Salir</a></nav>
+</div></header>
+
+<main id="v-login" hidden><div class="authwrap">
+  <aside class="brandp">
+    <span class="eyebrow">Costa Palmeras</span>
+    <h2>Sistema de gestión y seguimiento de obras</h2>
+    <ul><li>Cronograma con fechas y entrega estimada</li><li>Encargado y área responsable por etapa</li><li>Avisos automáticos al cliente</li></ul>
+  </aside>
+  <form class="authform" id="fl">
+    <h1>Ingresar</h1><p class="sub">Accedé con tu cuenta al portal de obras.</p>
+    <div class="f"><label for="le">Email</label><input id="le" name="email" type="email" required autocomplete="email"></div>
+    <div class="f"><label for="lp">Contraseña</label><input id="lp" name="pw" type="password" required autocomplete="current-password"></div>
+    <label class="chk"><input type="checkbox" data-show="lp"> Mostrar contraseña</label>
+    <div class="err" id="lerr" role="alert"></div>
+    <button class="btn" type="submit">Ingresar</button>
+    <button class="btn ghost" type="button" id="g">Ingresar con Google</button>
+    <div class="err" id="gerr" role="alert"></div>
+    <p class="sub" style="text-align:center"><a href="#" id="forgot">¿Olvidaste tu contraseña?</a></p>
+    <p class="sub" style="text-align:center">¿No tenés cuenta? <a href="#/registro">Crear cuenta</a></p>
+  </form>
+</div></main>
+
+<main id="v-reg" hidden><div class="authwrap">
+  <aside class="brandp">
+    <span class="eyebrow">Costa Palmeras</span>
+    <h2>Seguí tu obra paso a paso</h2>
+    <ul><li>Clientes: ingresá el código y la clave de tu obra y mirá el avance</li><li>Equipo: tu Gmail habilitado edita obras y puede ser encargado</li><li>Notificaciones en cada cambio de etapa</li></ul>
+  </aside>
+  <form class="authform" id="fr">
+    <h1>Crear cuenta</h1><p class="sub">Si sos del equipo de Costa Palmeras, ingresá desde “Ingresar con Google” con tu Gmail habilitado y se activa el panel de trabajador.</p>
+    <div class="f"><label for="rn">Nombre y apellido</label><input id="rn" name="name" required autocomplete="name"></div>
+    <div class="f"><label for="rm">Email</label><input id="rm" name="email" type="email" required autocomplete="email"></div>
+    <div class="g2"><div class="f"><label for="rc">Código de tu obra (opcional)</label><input id="rc" name="code" placeholder="CP-0000" autocomplete="off"></div>
+    <div class="f"><label for="rk">Clave de tu obra</label><input id="rk" name="pin" placeholder="XXXX-XXXX" autocomplete="off" autocapitalize="characters" maxlength="12"></div></div>
+    <div class="f"><label for="rp">Contraseña (mínimo 8 caracteres)</label><input id="rp" name="pw" type="password" required minlength="8" autocomplete="new-password"></div>
+    <div class="f"><label for="rp2">Repetir contraseña</label><input id="rp2" name="pw2" type="password" required autocomplete="new-password"></div>
+    <label class="chk"><input type="checkbox" data-show="rp,rp2"> Mostrar contraseñas</label>
+    <div class="err" id="rerr" role="alert"></div>
+    <button class="btn" type="submit">Crear cuenta</button>
+    <p class="sub" style="text-align:center;margin-top:14px">¿Ya tenés cuenta? <a href="#/login">Ingresar</a></p>
+  </form>
+</div></main>
+
+<main id="v-app" hidden><div class="app">
+  <div class="top"><div><h1 id="hi"></h1><p class="sub" id="hp"></p></div><div class="tb" id="tb"></div></div>
+  <div id="body"></div>
+</div></main>
+
+<!-- Nueva obra -->
+<dialog id="dw" aria-labelledby="dwt"><form id="fw">
+  <h2 id="dwt">Nueva obra</h2>
+  <div class="g2"><div class="f"><label for="wc">Cliente</label><input id="wc" name="client" required></div>
+  <div class="f"><label for="wk">Nº de presupuesto <span class="hint">La clave del cliente se genera sola al crear la obra.</span></label><input id="wk" name="code" required placeholder="CP-0000" autocomplete="off"></div></div>
+  <div class="g2"><div class="f"><label for="wl">Línea o servicio</label><select id="wl" name="line"></select></div>
+  <div class="f"><label for="warea">Área responsable</label><select id="warea" name="area"></select></div></div>
+  <div class="g2"><div class="f"><label for="wad">Dirección de la obra</label><input id="wad" name="addr"></div>
+  <div class="f"><label for="wsz">Medidas / tipo</label><input id="wsz" name="size" placeholder="Ej: 8 × 4 m, hormigón"></div></div>
+  <div class="f"><label for="wph">WhatsApp del cliente <span class="hint">Con característica, sin 0 ni 15 (ej: 2475 123456). Ahí se le avisa de los servicios posteriores.</span></label><input id="wph" name="phone" type="tel" inputmode="tel" autocomplete="off" placeholder="2475 123456"></div>
+  <label class="chk"><input type="checkbox" name="wa" checked> El cliente aceptó recibir avisos por WhatsApp</label>
+  <div class="g2"><div class="f"><label for="wo">Encargado inicial</label><select id="wo" name="owner" required></select></div>
+  <div class="f"><label for="wst">Inicio previsto</label><input id="wst" name="start" type="date"></div></div>
+  <div class="f"><label>Actividades de la obra
+    <button type="button" class="minilink" data-a="pickall">Todas</button><button type="button" class="minilink" data-a="picknone">Ninguna</button>
+    <span class="hint">Elegí cuáles incluir y sus días hábiles (vacío = a definir). Después podés unirlas, dividirlas y reordenarlas.</span></label>
+    <div class="presets" id="wpre"></div>
+    <div class="actpick" id="wacts"></div></div>
+  <div class="err" id="werr" role="alert"></div>
+  <div class="dr"><button type="button" class="btn ghost sm" data-close>Cancelar</button><button class="btn sm" type="submit">Crear obra</button></div>
+</form></dialog>
+
+<!-- Clave del cliente -->
+<dialog id="dp" aria-labelledby="dpt0"><div class="pinwrap">
+  <h2 id="dpt0">Clave del cliente</h2><p class="sub" id="dpt"></p>
+  <p class="sub">Dale al cliente estos dos datos. Con ellos vincula su obra al crear su cuenta o al ingresar.</p>
+  <div class="pindata"><div><span class="lbl">Código de obra</span><code class="pinbox" id="dpc"></code></div><div><span class="lbl">Clave</span><code class="pinbox big" id="dpk"></code></div></div>
+  <p class="sub">Después podés volver a verla en el encabezado de la obra o en “Editar datos”.</p>
+  <div class="dr"><button type="button" class="btn ghost sm" data-close>Cerrar</button><button type="button" class="btn sm" id="dpcopy">Copiar para enviar</button></div>
+</div></dialog>
+
+<!-- Datos de la obra -->
+<dialog id="dm" aria-labelledby="dmt"><form id="fs">
+  <h2 id="dmt">Datos de la obra</h2>
+  <div class="g2"><div class="f"><label for="mc">Cliente</label><input id="mc" name="client" required></div>
+  <div class="f"><label for="mk">Nº de presupuesto</label><input id="mk" name="code" required></div></div>
+  <div class="f"><label>Clave del cliente <span class="hint">Se la das al cliente junto con el código. Si cambia, se desvincula a quienes entraron con la anterior.</span></label>
+    <div class="pinrow"><code id="mpin" class="pinbox">—</code><button type="button" class="btn ghost sm" data-a="pincopy" data-src="mpin">Copiar</button><button type="button" class="btn ghost sm" data-a="pinregen">Generar clave nueva</button></div></div>
+  <div class="f"><label for="sad">Dirección</label><input id="sad" name="addr"></div>
+  <div class="f"><label for="mph">WhatsApp del cliente <span class="hint">Con característica, sin 0 ni 15 (ej: 2475 123456).</span></label><input id="mph" name="phone" type="tel" inputmode="tel" autocomplete="off" placeholder="2475 123456"></div>
+  <label class="chk"><input type="checkbox" id="mwa" name="wa"> El cliente aceptó recibir avisos por WhatsApp</label>
+  <div class="g2"><div class="f"><label for="ssz">Medidas / tipo</label><input id="ssz" name="size"></div>
+  <div class="f"><label for="sst">Inicio previsto</label><input id="sst" name="start" type="date"></div></div>
+  <div class="f"><label for="snt">Notas internas (el cliente no las ve)</label><textarea id="snt" name="notes" placeholder="Accesos, materiales, acuerdos, pendientes…"></textarea></div>
+  <div class="err" id="merr" role="alert"></div>
+  <div class="dr"><button type="button" class="btn ghost sm" data-close>Cancelar</button><button class="btn sm" type="submit">Guardar</button></div>
+</form></dialog>
+
+<!-- Actividad -->
+<dialog id="da" aria-labelledby="dat"><form id="fa">
+  <h2 id="dat">Actividad</h2><input type="hidden" id="aid">
+  <div class="f"><label for="aa">Área responsable</label><select id="aa" name="area" required></select></div>
+  <div class="f"><label for="an">Actividad</label><input id="an" name="name" list="acts" required></div>
+  <div class="f"><label for="ao">Encargado</label><select id="ao" name="owner" required></select></div>
+  <div class="g2"><div class="f"><label for="ad">Días hábiles (vacío = a definir)</label><input id="ad" name="days" type="number" min="1" max="365"></div>
+  <div class="f"><label for="as">Estado</label><select id="as" name="st"></select></div></div>
+  <div class="f"><label for="ano">Observación <span class="hint">Opcional. La ve el cliente en el detalle de etapas.</span></label><input id="ano" name="note" maxlength="140" placeholder="Ej: Se necesita acceso por el portón lateral"></div>
+  <div class="dr"><button type="button" class="btn ghost sm" data-close>Cancelar</button><button class="btn sm" type="submit">Guardar actividad</button></div>
+</form></dialog>
+
+<!-- Dividir actividad -->
+<dialog id="dsp" aria-labelledby="dspt"><form id="fsp">
+  <h2 id="dspt">Dividir actividad</h2><input type="hidden" id="spid">
+  <p class="sub" style="margin-top:16px" id="spinfo"></p>
+  <div class="f"><label for="spn">Cantidad de partes (2 a 6)</label><input id="spn" type="number" min="2" max="6" value="2" required>
+    <span class="hint">Los días se reparten entre las partes; cada una conserva área y encargado y se puede editar después.</span></div>
+  <div class="err" id="sperr" role="alert"></div>
+  <div class="dr"><button type="button" class="btn ghost sm" data-close>Cancelar</button><button class="btn sm" type="submit">Dividir</button></div>
+</form></dialog>
+
+<!-- Servicio posterior -->
+<dialog id="dsv" aria-labelledby="dsvt"><form id="fv">
+  <h2 id="dsvt">Servicio posterior</h2><input type="hidden" id="svid">
+  <div class="f"><label for="svn">Servicio</label><input id="svn" list="svtypes" required placeholder="Ej: Limpieza general"></div>
+  <div class="f"><label for="svq">Realizar después de</label>
+    <div class="g2"><input id="svq" type="number" min="1" max="120" value="2"><select id="svu"><option value="m">meses</option><option value="y" selected>años</option></select></div>
+    <div class="presets">
+      <button type="button" class="chip pre" data-a="svpre" data-q="6" data-u="m">6 meses</button>
+      <button type="button" class="chip pre" data-a="svpre" data-q="1" data-u="y">1 año</button>
+      <button type="button" class="chip pre" data-a="svpre" data-q="2" data-u="y">2 años</button>
+    </div></div>
+  <div class="f"><label for="svd">Fecha estimada <span class="hint">Se calcula sola, pero podés cambiarla. El cliente recibe el aviso 7 días antes.</span></label><input id="svd" type="date" required></div>
+  <div class="f"><label for="svo">Observación <span class="hint">Opcional. La ve el cliente.</span></label><input id="svo" maxlength="140"></div>
+  <div class="notice" id="svwa" style="margin-top:14px"></div>
+  <div class="err" id="sverr" role="alert"></div>
+  <div class="dr"><button type="button" class="btn ghost sm" data-close>Cancelar</button><button class="btn sm" type="submit">Guardar servicio</button></div>
+</form></dialog>
+
+<!-- Confirmación -->
+<dialog id="dc" aria-labelledby="dct"><form method="dialog">
+  <h2 id="dct">Confirmar</h2>
+  <p style="margin-top:18px;font-size:14.5px" id="dctx"></p>
+  <div class="dr"><button value="cancel" class="btn ghost sm">Cancelar</button><button value="ok" class="btn sm" id="dcok">Confirmar</button></div>
+</form></dialog>
+
+<datalist id="acts"></datalist>
+<datalist id="svtypes"></datalist>
+
+<footer>© Costa Palmeras · Piscinas para toda la vida · Av. Guzmán s/n, Rojas, Buenos Aires</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="./js/client-portal.js"></script>
+</body>
+</html>

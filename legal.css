@@ -1,0 +1,10 @@
+
+/* Estilos compartidos de términos y privacidad */
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#06231a;color:#eef3ee}
+  h1,h2{font-family:'Cormorant Garamond',serif}
+  .gold{color:#e5b64a}
+  .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:1rem}
+  main h2{font-size:1.6rem;font-weight:600;color:#e5b64a;margin:2rem 0 .5rem}
+  main p,main li{color:rgba(238,243,238,.85);line-height:1.7}
+  main ul{list-style:disc;padding-left:1.25rem}
+  a.lnk{color:#e5b64a;text-decoration:underline}

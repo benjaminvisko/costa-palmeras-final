@@ -1,0 +1,13 @@
+.reviews-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.review-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

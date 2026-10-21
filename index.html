@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Costa Palmeras – Piscinas para toda la vida</title>
+<meta name="description" content="Construcción de piscinas de hormigón de diseño en Rojas y toda la región. 30 años de trayectoria.">
+<meta name="theme-color" content="#00763F">
+<link rel="canonical" href="https://www.costapalmeras.com/"><!-- TODO: confirmar el dominio definitivo -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Costa Palmeras – Piscinas para toda la vida">
+<meta property="og:description" content="Construcción de piscinas de hormigón de diseño en Rojas y toda la región. 30 años de trayectoria.">
+<meta property="og:url" content="https://www.costapalmeras.com/">
+<meta property="og:locale" content="es_AR">
+<!-- TODO: subir una imagen 1200x630 (ej. ./images/og-costa-palmeras.jpg) y usar su URL absoluta acá -->
+<meta property="og:image" content="https://www.costapalmeras.com/images/og-costa-palmeras.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Costa Palmeras – Piscinas para toda la vida">
+<meta name="twitter:description" content="Construcción de piscinas de hormigón de diseño en Rojas y toda la región.">
+<meta name="twitter:image" content="https://www.costapalmeras.com/images/og-costa-palmeras.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Costa Palmeras",
+  "description": "Construcción de piscinas de hormigón de diseño en Rojas y toda la región.",
+  "url": "https://www.costapalmeras.com/",
+  "telephone": "+5492475492324",
+  "email": "ventas@costapalmeras.com",
+  "image": "https://www.costapalmeras.com/images/logo_costa_palmeras_512.png",
+  "address": { "@type": "PostalAddress", "streetAddress": "Av. Guzmán S/N", "addressLocality": "Rojas", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
+  "sameAs": ["https://www.instagram.com/piscinascostapalmeras/", "https://www.facebook.com/p/Costa-Palmeras-100063575407077/"]
+}
+</script>
+<!-- TODO: agregar al JSON-LD "openingHours" (horarios reales) y "geo" (latitud/longitud) cuando se confirmen; el teléfono debe coincidir con PHONE en el script principal. -->
+
+<!-- TODO (rendimiento): Tailwind por CDN es solo para desarrollo. Para producción pasar a un build estático:
+     npx tailwindcss -i ./src/input.css -o ./css/tailwind.css (agregar la opción minify)
+     y reemplazar la etiqueta script de cdn.tailwindcss.com por un link a ./css/tailwind.css. No ejecutado todavía: requiere tu aval. -->
+
+<!-- ========== [BLOQUE 1] ASSETS ORIGINALES ========== -->
+<link rel="icon" href="./images/logopalmeras.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="./js/home-tailwind-config.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+
+<script src="./js/image-fallback.js"></script>
+
+<!-- ========== [BLOQUE 2] ESTILOS PERSONALIZADOS ========== -->
+
+<link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+<!-- Ícono oficial de WhatsApp (se reutiliza con <use href="#i-wa">) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </symbol>
+</svg>
+
+<!-- ========== [BLOQUE 3] NAVBAR ========== -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 py-4">
+  <div class="relative mx-auto max-w-[1500px] px-5 sm:px-8 flex items-center justify-between gap-4 xl:grid xl:grid-cols-[1fr_auto_1fr] xl:gap-8">
+    <div class="flex items-center gap-4 xl:justify-between">
+      <a href="carrito.html" class="cart-btn" aria-label="Pedido de accesorios" title="Pedido de accesorios">
+        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+        <span class="cart-badge" id="cartBadge" hidden>0</span>
+      </a>
+      <nav class="hidden xl:flex items-center justify-start gap-3 2xl:gap-5" aria-label="Navegación izquierda">
+        <a class="nav-link" href="#obras">Diseño de piscinas</a>
+        <a class="nav-link" href="#modelos">Líneas</a>
+        <a class="nav-link" href="#amenidades">Accesorios</a>
+      </nav>
+    </div>
+
+    <a href="index.html" class="flex items-center shrink-0" aria-label="Costa Palmeras, inicio">
+      <img src="./images/cropped-logo-horizontal-350x66.png" alt="Costa Palmeras" class="logo-nav h-9 sm:h-11 w-auto" onerror="imgFallback(this)">
+    </a>
+
+    <div class="flex items-center justify-end xl:justify-between gap-3 min-w-0">
+      <div class="flex items-center gap-3">
+      <nav class="hidden xl:flex items-center gap-3 2xl:gap-5" aria-label="Navegación derecha">
+        <a class="nav-link" href="#proyecto">Nosotros</a>
+        <a class="nav-link" href="#ubicacion">Ubicación</a>
+      </nav>
+      <a href="#contacto" class="hidden xl:inline-flex shrink-0 whitespace-nowrap btn-gold text-sm" style="padding:.55rem 1rem">Pedí presupuesto</a>
+      </div>
+      <a href="miobra.html" data-session-link class="hidden sm:inline-flex shrink-0 whitespace-nowrap btn-ghost text-sm"><i data-lucide="log-in" class="w-4 h-4"></i> Portal de clientes</a>
+      <button id="burger" class="xl:hidden text-white p-2" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+  </div>
+
+  <div id="drawer" class="xl:hidden hidden border-t border-white/10 bg-night-900/98" style="background: rgba(6,43,27,.98)">
+    <div class="px-6 py-5 flex flex-col gap-4 text-white/90">
+      <a href="#obras" class="drawer-link">Diseño de piscinas</a>
+      <a href="#modelos" class="drawer-link">Líneas</a>
+      <a href="#amenidades" class="drawer-link">Accesorios</a>
+      <a href="#proyecto" class="drawer-link">Nosotros</a>
+      <a href="#como-trabajamos" class="drawer-link">Cómo trabajamos</a>
+      <a href="#faq" class="drawer-link">Preguntas frecuentes</a>
+      <a href="#ubicacion" class="drawer-link">Ubicación</a>
+      <a href="carrito.html" class="drawer-link" id="drawerCart">Pedido de accesorios (<span id="drawerCartCount">0</span>)</a>
+      <a href="#contacto" class="drawer-link btn-gold mt-2">Pedí presupuesto</a>
+      <a href="miobra.html" class="drawer-link btn-ghost justify-center">Portal de clientes</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== [BLOQUE 4] HERO ========== -->
+<section id="inicio" class="relative min-h-[100svh] flex items-center overflow-hidden text-white">
+  <div id="hero-bg" class="absolute inset-x-0 -top-[10%] h-[120%]">
+<!-- TODO: subir ./images/portada-poster.jpg (primer cuadro del video, optimizado) -->
+    <video id="heroVideo" class="absolute inset-0 w-full h-full object-cover" data-src="./images/portadaweb.mp4" poster="./images/portada-poster.jpg" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+  </div>
+  <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(6,43,27,.78) 0%, rgba(6,43,27,.45) 42%, rgba(6,43,27,.92) 100%), linear-gradient(90deg, rgba(6,43,27,.65), transparent 70%);"></div>
+
+  <div class="relative mx-auto max-w-7xl w-full px-5 sm:px-8 pt-32 pb-20 grid lg:grid-cols-[1.25fr_.75fr] gap-12 items-center -translate-y-6 sm:-translate-y-10">
+    <div class="flex flex-col items-start text-left">
+      <p class="hero-in inline-flex items-center gap-2 rounded-full border border-gold-soft/50 bg-white/5 px-4 py-1.5 text-sm text-gold-soft backdrop-blur"><i data-lucide="award" class="w-4 h-4"></i> 30 años construyendo piscinas en Rojas</p>
+      <h1 class="hero-in mt-6 text-6xl sm:text-8xl xl:text-9xl font-semibold leading-[.98]">Piscinas para<br>toda la vida</h1>
+      <div class="hero-in mt-8 flex flex-wrap gap-4">
+        <a href="https://wa.me/5492475492324?text=Hola,%20quisiera%20solicitar%20presupuesto" target="_blank" rel="noopener" class="btn-gold pulse-soft"><svg class="w-5 h-5" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg> Solicitá tu piscina</a>
+        <a href="#obras" class="btn-ghost"><i data-lucide="images" class="w-5 h-5"></i> Ver diseño de piscinas</a>
+      </div>
+    </div>
+
+    <form id="quickForm" novalidate class="hero-in rounded-3xl border border-white/20 bg-white/10 p-6 sm:p-7 backdrop-blur-xl shadow-2xl">
+      <h2 class="text-3xl font-semibold">Consultá disponibilidad</h2>
+      <p class="text-sm text-white/70 mt-1">Te respondemos con fecha estimada de inicio de obra.</p>
+      <div class="mt-5 space-y-3">
+        <div><label class="sr-only" for="qName">Nombre</label><input id="qName" name="name" class="field field-dark" placeholder="Tu nombre" autocomplete="name"><p class="msg-err" data-err="name"></p></div>
+        <div><label class="sr-only" for="qPhone">Teléfono</label><input id="qPhone" name="phone" class="field field-dark" placeholder="Teléfono / WhatsApp" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="tel"><p class="msg-err" data-err="phone"></p></div>
+        <div><label class="sr-only" for="qMonth">Mes de inicio</label>
+          <select id="qMonth" name="month" class="field field-dark"><option value="">¿Cuándo querés empezar?</option><option>Lo antes posible</option><option>En 1 a 3 meses</option><option>En 3 a 6 meses</option><option>Solo estoy averiguando</option></select><p class="msg-err" data-err="month"></p></div>
+      </div>
+      <button class="btn-gold w-full mt-3" type="submit">Consultar fecha</button>
+      <p class="mt-3 text-xs text-white/65">Al enviar aceptás nuestra <a href="privacidad.html" class="underline hover:text-gold-soft">política de privacidad</a>.</p>
+    </form>
+  </div>
+
+  <a href="#obras" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition" aria-label="Ver diseño de piscinas"><i data-lucide="chevrons-down" class="w-7 h-7 animate-bounce"></i></a>
+</section>
+
+<!-- ========== [BLOQUE 5] DISEÑO DE PISCINAS ========== -->
+<section id="obras" class="relative py-24 sm:py-32 text-night-900 overflow-hidden" style="background:#F4F6F0">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="reveal grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,360px)] lg:items-center">
+      <div class="max-w-2xl">
+        <h2 class="text-4xl sm:text-6xl font-semibold leading-tight">Diseño de piscinas</h2>
+        <p class="mt-4 text-night-700/80 text-lg">El hormigón armado permite crear piscinas a medida: desde líneas modernas hasta formas orgánicas, bordes infinitos y spas integrados. Diseñamos cada proyecto según tu terreno y la manera en que querés disfrutarlo.</p>
+        <p class="mt-4 text-night-700/80 leading-relaxed">Te acompañamos desde la idea inicial hasta la obra terminada para que la piscina se integre al jardín y se convierta en el corazón de tu espacio al aire libre.</p>
+      </div>
+      <aside class="flex flex-col gap-5 rounded-2xl border border-gold/30 bg-night-700 p-6 text-white shadow-xl sm:p-8" aria-label="Seguimiento de obra">
+        <div class="flex items-start gap-3">
+          <i data-lucide="hard-hat" class="mt-1 h-5 w-5 shrink-0 text-gold-soft"></i>
+          <p class="text-lg font-medium leading-relaxed">Seguimiento de tu servicio en tiempo y forma</p>
+        </div>
+        <a href="miobra.html" class="btn-gold w-fit text-base" style="padding:1rem 1.5rem">Seguir mi obra <i data-lucide="arrow-right" class="h-5 w-5"></i></a>
+      </aside>
+    </div>
+
+    <div class="design-carousel reveal mt-10" id="designCarousel" role="region" aria-roledescription="carrusel" aria-label="Diseños de piscinas">
+      <div class="design-viewport" id="designViewport" tabindex="0" aria-label="Fotos de diseños de piscinas">
+        <div class="design-track" id="designTrack" aria-live="off"></div>
+        <button class="design-arrow prev" id="designPrev" type="button" aria-label="Foto anterior"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+        <button class="design-arrow next" id="designNext" type="button" aria-label="Foto siguiente"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+      </div>
+      <div class="design-controls">
+        <span id="designPosition" class="design-position" role="status" aria-live="off"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== [BLOQUE 6] LÍNEAS DE PISCINAS ========== -->
+<section id="modelos" class="py-24 sm:py-32 bg-white">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="reveal flex flex-wrap items-end justify-between gap-6">
+      <div class="max-w-2xl">
+        <h2 class="text-4xl sm:text-6xl font-semibold leading-tight">Líneas exclusivas para tu proyecto</h2>
+        <p class="mt-4 text-night-700/80 text-lg">Elegí la línea que mejor acompaña tu espacio y la forma en que querés disfrutar tu piscina.</p>
+      </div>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6" id="modelGrid"></div>
+  </div>
+</section>
+
+<!-- ========== [BLOQUE 7] ACCESORIOS ========== -->
+<section id="amenidades" class="py-24 sm:py-28 bg-sand-100" style="background:#e8eee6">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="reveal max-w-5xl">
+      <p class="text-xs font-semibold uppercase tracking-[.2em] text-teal-deep">Accesorios · detalles para disfrutar</p>
+      <h2 class="mt-3 max-w-3xl text-4xl font-semibold leading-tight sm:text-6xl">Descubrí todo lo que podés agregarle a tu piscina.</h2>
+    </div>
+    <div class="mt-12" id="amenGrid"></div>
+    <div class="mt-10 flex justify-center">
+      <a href="servicios.html" class="btn-gold"><i data-lucide="arrow-right" class="w-4 h-4"></i> Ver más servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== [BLOQUE 8] SOBRE EL PROYECTO ========== -->
+<section id="proyecto" class="py-24 sm:py-32 bg-sand-50">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+    <div class="reveal">
+      <h2 class="text-4xl sm:text-6xl font-semibold leading-tight">Una empresa familiar, treinta años de agua quieta.</h2>
+      <p class="mt-6 text-lg text-night-700/90 leading-relaxed max-w-xl">Somos líderes en construcción de piscinas de diseño en Rojas y toda la región. Cada obra la proyectamos, la construimos y la acompañamos después de entregada.</p>
+      <p class="mt-4 text-night-700/80 leading-relaxed max-w-xl">Trabajamos con hormigón, equipos propios y una cuadrilla que conoce su oficio. Por eso podemos comprometernos con un plazo: tu piscina, en 8 días.</p>
+      <a href="nosotros.html" class="btn-gold mt-7" style="padding:.8rem 1.5rem">Quiénes somos <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+
+    <div class="reveal relative" style="--d:.15s">
+      <div class="rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/5] zoom">
+        <img src="./images/imagenpabloHD.jpg" alt="Obra de piscina de hormigón en construcción por el equipo de Costa Palmeras" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=1200&q=80';this.onerror=function(){imgFallback(this)}">
+      </div>
+      <figure class="relative sm:absolute sm:-bottom-10 sm:-left-10 mt-6 sm:mt-0 max-w-sm rounded-2xl bg-night-900 text-white p-6 shadow-2xl border border-gold/40" style="background:#062B1B">
+        <blockquote class="font-display text-xl italic leading-snug">“Nuestros valores generan la confianza necesaria para traducirse en acciones concretas. Ese es nuestro legado.”</blockquote>
+        <figcaption class="mt-3 text-sm text-gold-soft">Pablo Rimaulo · Director</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CÓMO TRABAJAMOS ========== -->
+
+<section id="como-trabajamos" class="py-24 sm:py-32">
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="reveal max-w-2xl">
+      <span class="ct-pill">Proceso transparente</span>
+      <h2 class="mt-5 text-4xl sm:text-6xl font-semibold leading-tight">Cómo trabajamos</h2>
+      <p class="mt-5 text-night-700/80 text-lg leading-relaxed">Un proceso claro, de la primera visita a la entrega de tu piscina.</p>
+    </div>
+    <ol class="ct-steps mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6" id="stepsGrid">
+      <li class="ct-card reveal" style="--d:0s">
+        <span class="ct-num" aria-hidden="true">01</span>
+        <div class="ct-icon"><i data-lucide="map-pinned" class="w-6 h-6"></i></div>
+        <p class="ct-phase">Fase 01 · Paso 1</p>
+        <h3>Visita al terreno</h3>
+        <p class="ct-txt">Recorremos tu espacio, tomamos medidas y escuchamos cómo querés usar tu piscina.</p>
+      </li>
+      <li class="ct-card reveal" style="--d:.08s">
+        <span class="ct-num" aria-hidden="true">02</span>
+        <div class="ct-icon"><i data-lucide="pencil-ruler" class="w-6 h-6"></i></div>
+        <p class="ct-phase">Fase 02 · Paso 2</p>
+        <h3>Diseño y presupuesto</h3>
+        <p class="ct-txt">Proyectamos la piscina a medida y te presentamos una propuesta con el detalle de lo que incluye.</p>
+      </li>
+      <li class="ct-card reveal" style="--d:.16s">
+        <span class="ct-num" aria-hidden="true">03</span>
+        <div class="ct-icon"><i data-lucide="hard-hat" class="w-6 h-6"></i></div>
+        <p class="ct-phase">Fase 03 · Paso 3</p>
+        <h3>Obra</h3>
+        <p class="ct-txt">Construimos en hormigón con nuestro equipo y podés seguir el avance desde el portal de clientes.</p>
+      </li>
+      <li class="ct-card reveal" style="--d:.24s">
+        <span class="ct-num" aria-hidden="true">04</span>
+        <div class="ct-icon"><i data-lucide="key-round" class="w-6 h-6"></i></div>
+        <p class="ct-phase">Fase 04 · Paso 4</p>
+        <h3>Entrega y postventa</h3>
+        <p class="ct-txt">Te entregamos la piscina funcionando y seguimos acompañándote después de la obra.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== PREGUNTAS FRECUENTES ========== -->
+<section id="faq" class="py-24 sm:py-28" style="background:#F8F5F0">
+  <div class="mx-auto max-w-3xl px-5 sm:px-8">
+    <div class="reveal">
+      <h2 class="text-4xl sm:text-6xl font-semibold leading-tight">Preguntas frecuentes</h2>
+      <p class="mt-4 text-night-700/80 text-lg">Lo que más nos consultan antes de empezar una obra.</p>
+    </div>
+    <div class="mt-10 space-y-3 reveal">
+      <details class="faq rounded-2xl bg-white border border-sand-200 p-5">
+        <summary>¿Cuánto cuesta una piscina y qué incluye el presupuesto?</summary>
+        <!-- TODO: completar con datos reales (rangos de precio y qué incluye exactamente el presupuesto). No se publican cifras sin confirmar. -->
+        <p>El costo depende del tamaño, el diseño, el terreno y los equipos y revestimientos que elijas. Después de la visita al terreno te enviamos un presupuesto sin cargo, con el detalle de lo que incluye cada ítem.</p>
+      </details>
+      <details class="faq rounded-2xl bg-white border border-sand-200 p-5">
+        <summary>¿Cuánto demora la obra?</summary>
+        <!-- TODO: confirmar plazos reales con la empresa (el sitio indica 8 días según tamaño y clima). -->
+        <p>El plazo depende del tamaño de la piscina y de las condiciones climáticas. En la visita y en el presupuesto te confirmamos una fecha estimada de inicio y de entrega.</p>
+      </details>
+      <details class="faq rounded-2xl bg-white border border-sand-200 p-5">
+        <summary>¿Tiene garantía?</summary>
+        <!-- TODO: indicar condiciones y duración reales de la garantía. -->
+        <p>Sí, acompañamos cada obra con servicio de postventa. Las condiciones y la duración de la garantía se detallan en el presupuesto.</p>
+      </details>
+      <details class="faq rounded-2xl bg-white border border-sand-200 p-5">
+        <summary>¿Qué mantenimiento necesita una piscina de hormigón?</summary>
+        <p>Requiere control periódico del agua, limpieza y revisión del equipo de filtrado. Accesorios como el ionizador o el ablandador pueden ayudar a reducir el mantenimiento. Al entregar la obra te explicamos los cuidados básicos.</p>
+      </details>
+      <details class="faq rounded-2xl bg-white border border-sand-200 p-5">
+        <summary>¿Cuáles son las formas de pago?</summary>
+        <!-- TODO: completar con las formas de pago reales (anticipo, cuotas, medios aceptados). -->
+        <p>Las formas de pago se acuerdan según cada proyecto y se detallan en el presupuesto. Consultanos y te explicamos las opciones disponibles.</p>
+      </details>
+    </div>
+    <p class="mt-8 text-center text-night-700/80">¿Otra duda? <a href="#contacto" class="font-semibold text-teal-deep hover:underline">Escribinos</a>.</p>
+  </div>
+</section>
+
+<!-- ========== [BLOQUE 10] OPINIONES / RESEÑAS ========== -->
+<section id="resenas" class="py-20 bg-white">
+
+
+  <div class="rv">
+    <div class="rv-layout">
+      <div class="rv-side">
+        <div class="rv-brand">
+          <img class="rv-logo" src="./images/IMG_6115.JPEG" alt="" width="40" height="40" loading="lazy" onerror="this.onerror=null;this.removeAttribute('src')">
+          <span class="rv-title">Costa Palmeras</span>
+        </div>
+        <div class="rv-score"><b id="rvScore">4.8</b><div class="rv-stars" id="rvSumStars" aria-label="4.8 de 5 estrellas"></div></div>
+                <div class="rv-count" id="rvCount">Basado en 33 reseñas.</div>
+        <div class="rv-powered">powered by <b><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></b></div>
+        <a class="rv-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Costa+Palmeras+Rojas+Buenos+Aires">
+          valóranos en <span class="g" id="rvBtnG"></span>
+        </a>
+      </div>
+
+      <div class="rv-main">
+        <button class="rv-arrow rv-prev" id="rvPrev" type="button" aria-label="Reseñas anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 4l-8 8 8 8"/></svg></button>
+        <div class="rv-track" id="rvTrack" tabindex="0" aria-label="Reseñas de clientes"></div>
+        <button class="rv-arrow rv-next" id="rvNext" type="button" aria-label="Reseñas siguientes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 4l8 8-8 8"/></svg></button>
+        <div class="rv-dots" id="rvDots"></div>
+      </div>
+    </div>
+  </div>
+
+<script src="./js/reviews-carousel.js"></script>
+</section>
+
+<!-- ========== [BLOQUE 11] UBICACIÓN ========== -->
+<section id="ubicacion" class="py-24 sm:py-32 bg-sand-100" style="background:#F8F5F0">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[.8fr_1.2fr] gap-10 items-stretch">
+    <div class="reveal">
+      <h2 class="text-4xl sm:text-5xl font-semibold leading-tight">Visitá la casa central</h2>
+      <p class="mt-4 text-night-700/80">Pasá por Rojas y recorré nuestras piscinas y materiales.</p>
+      <ul class="mt-8 space-y-4">
+        <li class="flex gap-4 rounded-2xl bg-white p-5 border border-sand-200"><i data-lucide="map-pin" class="w-6 h-6 text-teal-deep shrink-0"></i><div><p class="font-semibold">Dirección</p><p class="text-night-700/80 text-sm">Av. Guzmán S/N, Rojas, Provincia de Buenos Aires</p></div></li>
+        <li class="flex gap-4 rounded-2xl bg-white p-5 border border-sand-200"><i data-lucide="phone" class="w-6 h-6 text-teal-deep shrink-0"></i><div class="flex-1"><p class="font-semibold">Ventas</p><a id="phoneLink" class="text-night-700/80 text-sm hover:text-teal-deep" href="tel:+5492475492324">2475 492324</a></div><button id="phoneCopy" class="copy text-xs text-teal-deep font-semibold hover:underline" data-copy="2475 492324">Copiar</button></li>
+        <li class="flex gap-4 rounded-2xl bg-white p-5 border border-sand-200"><i data-lucide="mail" class="w-6 h-6 text-teal-deep shrink-0"></i><div class="flex-1"><p class="font-semibold">Correo</p><a class="text-night-700/80 text-sm hover:text-teal-deep break-all" href="mailto:ventas@costapalmeras.com">ventas@costapalmeras.com</a></div><button class="copy text-xs text-teal-deep font-semibold hover:underline" data-copy="ventas@costapalmeras.com">Copiar</button></li>
+      </ul>
+    </div>
+    <div class="reveal rounded-[2rem] overflow-hidden shadow-2xl min-h-[380px] border-4 border-white" style="--d:.15s">
+      <iframe title="Mapa de Costa Palmeras en Rojas" class="w-full h-full min-h-[380px]" style="border:0" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=Rojas,+Buenos+Aires+Av+Guzman&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ========== [BLOQUE 12] CONTACTO ========== -->
+<section id="contacto" class="py-24 sm:py-32 text-white" style="background: linear-gradient(135deg,#062B1B,#145A38)">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 grid lg:grid-cols-[.9fr_1.1fr] gap-12 items-start">
+    <div class="reveal">
+      <h2 class="text-4xl sm:text-6xl font-semibold leading-tight">Pedí tu presupuesto</h2>
+      <p class="mt-5 text-white/75 text-lg max-w-md">Contanos qué imaginás. Con unos datos del terreno armamos una propuesta y te llamamos para coordinar una visita.</p>
+      <ul class="mt-8 space-y-3 text-white/85">
+        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-gold-soft shrink-0 mt-0.5"></i> Presupuesto sin cargo</li>
+        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-gold-soft shrink-0 mt-0.5"></i> Visita técnica al terreno</li>
+        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-gold-soft shrink-0 mt-0.5"></i> Obra de hormigón en 8 días</li>
+      </ul>
+    </div>
+
+    <form id="contactForm" novalidate class="reveal rounded-3xl bg-white text-night-900 p-6 sm:p-9 shadow-2xl grid sm:grid-cols-2 gap-4" style="--d:.12s">
+      <div><label class="text-sm font-semibold" for="cName">Nombre y apellido</label><input id="cName" name="name" class="field mt-1" autocomplete="name"><p class="msg-err" data-err="name"></p></div>
+      <div><label class="text-sm font-semibold" for="cMail">Correo electrónico</label><input id="cMail" name="email" type="email" class="field mt-1" autocomplete="email"><p class="msg-err" data-err="email"></p></div>
+      <div><label class="text-sm font-semibold" for="cPhone">Teléfono</label><input id="cPhone" name="phone" class="field mt-1" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="tel"><p class="msg-err" data-err="phone"></p></div>
+      <div><label class="text-sm font-semibold" for="cModel">Línea de interés</label>
+        <select id="cModel" name="model" class="field mt-1"><option value="">Elegí una opción</option><option>Línea Bacoli</option><option>Línea Mirabilis</option><option>Todavía no lo sé</option></select><p class="msg-err" data-err="model"></p></div>
+      <div class="sm:col-span-2"><label class="text-sm font-semibold" for="cMsg">Mensaje</label><textarea id="cMsg" name="msg" rows="4" class="field mt-1" placeholder="Medidas del terreno, ubicación, ideas..."></textarea><p class="msg-err" data-err="msg"></p></div>
+      <div class="sm:col-span-2"><button class="btn-gold w-full" type="submit"><i data-lucide="send" class="w-5 h-5"></i> Enviar consulta</button>
+        <p class="mt-3 text-xs text-night-700/70 text-center">Al enviar aceptás nuestra <a href="privacidad.html" class="underline text-teal-deep">política de privacidad</a>.</p></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== [BLOQUE 13] FOOTER ========== -->
+<footer class="text-white/70 pt-20 pb-8" style="background:#041F14">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_.8fr_.8fr_1.2fr]">
+    <div>
+      <img src="./images/cropped-logo-horizontal-350x66.png" alt="Costa Palmeras" class="h-10 w-auto" style="filter:brightness(0) invert(1)" onerror="imgFallback(this)">
+      <p class="mt-5 max-w-xs text-sm leading-relaxed">30 años de experiencia construyendo piscinas de hormigón para toda la vida.</p>
+      <div class="mt-6 flex gap-3">
+        <a href="https://www.instagram.com/piscinascostapalmeras/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 grid place-items-center rounded-full border border-white/20 hover:bg-gold hover:text-night-900 hover:border-gold transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <a href="https://www.facebook.com/p/Costa-Palmeras-100063575407077/?locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 grid place-items-center rounded-full border border-white/20 hover:bg-gold hover:text-night-900 hover:border-gold transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        <a href="https://wa.me/5492475492324" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-10 h-10 grid place-items-center rounded-full border border-white/20 hover:bg-gold hover:text-night-900 hover:border-gold transition"><svg class="w-4 h-4" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-body text-sm font-semibold text-white mb-4">Navegación</h3>
+      <ul class="space-y-2 text-sm"><li><a class="hover:text-gold-soft" href="#obras">Diseño de piscinas</a></li><li><a class="hover:text-gold-soft" href="#modelos">Líneas</a></li><li><a class="hover:text-gold-soft" href="#amenidades">Accesorios</a></li><li><a class="hover:text-gold-soft" href="#proyecto">El proyecto</a></li><li><a class="hover:text-gold-soft" href="#como-trabajamos">Cómo trabajamos</a></li><li><a class="hover:text-gold-soft" href="#faq">Preguntas frecuentes</a></li><li><a class="hover:text-gold-soft" href="#ubicacion">Ubicación</a></li><li><a class="hover:text-gold-soft" href="#contacto">Contacto</a></li><li><a class="hover:text-gold-soft" href="nosotros.html">Nosotros</a></li></ul>
+    </div>
+    <div>
+      <h3 class="font-body text-sm font-semibold text-white mb-4">Legal</h3>
+      <ul class="space-y-2 text-sm"><li><a class="hover:text-gold-soft" href="terminos.html">Términos y condiciones</a></li><li><a class="hover:text-gold-soft" href="privacidad.html">Política de privacidad</a></li><li><a class="hover:text-gold-soft" href="privacidad.html#cookies">Política de cookies</a></li><li><a class="hover:text-gold-soft" href="#" data-cookie-settings>Preferencias de cookies</a></li><li><a class="hover:text-gold-soft" href="miobra.html">Portal de clientes</a></li></ul>
+    </div>
+    <div>
+      <h3 class="font-body text-sm font-semibold text-white mb-4">Novedades de obra</h3>
+      <p class="text-sm">Recibí ideas de diseño y mirá obras nuevas.</p>
+      <form id="newsForm" novalidate class="mt-4">
+        <div class="flex gap-2"><label class="sr-only" for="nMail">Correo</label><input id="nMail" class="field field-dark" style="padding:.7rem 1rem" placeholder="tu@correo.com" type="email" autocomplete="email"><button class="btn-gold shrink-0" style="padding:.7rem 1.1rem" aria-label="Suscribirme"><i data-lucide="arrow-right" class="w-4 h-4"></i></button></div>
+        <p class="msg-err" data-err="email" style="color:#fda4af"></p>
+        <p class="mt-2 text-xs text-white/60">Más información en nuestra <a href="privacidad.html" class="underline hover:text-gold-soft">política de privacidad</a>.</p>
+      </form>
+    </div>
+  </div>
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 mt-14 pt-6 border-t border-white/10 text-xs flex flex-wrap justify-between gap-3">
+    <p>&copy; 2026 Costa Palmeras – Todos los derechos reservados.</p>
+    <p>Av. Guzmán S/N · Rojas, Buenos Aires · <span id="footPhone">2475 492324</span></p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/5492475492324?text=Hola,%20quisiera%20consultar%20por%20una%20piscina" class="wa-float" target="_blank" rel="noopener" aria-label="Contacto por WhatsApp"><svg class="w-7 h-7" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<!-- ========== [BLOQUE 14] MODALES ========== -->
+<div id="obraModal" class="overlay" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="sheet relative w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-3xl bg-white text-night-900 shadow-2xl grid lg:grid-cols-[1.1fr_.9fr]">
+    <button class="close absolute top-3 right-3 z-10 w-10 h-10 grid place-items-center rounded-full bg-night-900/80 text-white hover:bg-night-900" style="background:rgba(6,43,27,.8)" aria-label="Cerrar"><i data-lucide="x" class="w-5 h-5"></i></button>
+    <div class="bg-night-900" style="background:#062B1B">
+      <div class="relative aspect-[4/3] lg:aspect-auto lg:h-[70%] overflow-hidden">
+        <img id="mImg" alt="" class="w-full h-full object-cover" onerror="imgFallback(this)">
+        <button id="mPrev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 grid place-items-center rounded-full bg-white/85 hover:bg-white" aria-label="Foto anterior"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+        <button id="mNext" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 grid place-items-center rounded-full bg-white/85 hover:bg-white" aria-label="Foto siguiente"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+        <span id="mCount" class="absolute bottom-3 right-3 text-xs bg-night-900/80 text-white rounded-full px-3 py-1" style="background:rgba(6,43,27,.8)"></span>
+      </div>
+      <div id="mThumbs" class="flex gap-2 p-3 overflow-x-auto"></div>
+    </div>
+    <div class="p-7 sm:p-9">
+      <p id="mStatus" class="inline-block rounded-full bg-sand-200 px-3 py-1 text-xs font-semibold text-night-700"></p>
+      <h3 id="mTitle" class="mt-3 text-3xl font-semibold leading-tight"></h3>
+      <p id="mDate" class="text-sm text-night-700/70 mt-1"></p>
+      <p id="mDesc" class="mt-4 text-night-700/90 leading-relaxed"></p>
+      <h4 class="mt-6 font-semibold">Ideas para tu proyecto</h4>
+      <ul id="mSpecs" class="mt-3 space-y-2 text-sm"></ul>
+      <a id="mWa" target="_blank" rel="noopener" class="btn-gold mt-8 w-full"><svg class="w-5 h-5" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg> Quiero un diseño así</a>
+    </div>
+  </div>
+</div>
+
+<div id="amenityModal" class="overlay" role="dialog" aria-modal="true" aria-labelledby="amenityTitle">
+  <div class="sheet relative w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-3xl bg-white text-night-900 shadow-2xl grid lg:grid-cols-[1.1fr_.9fr]">
+    <button class="close absolute top-3 right-3 z-10 w-10 h-10 grid place-items-center rounded-full text-white hover:bg-night-900" style="background:rgba(6,43,27,.8)" aria-label="Cerrar"><i data-lucide="x" class="w-5 h-5"></i></button>
+    <div class="relative min-h-[260px] bg-night-900 lg:min-h-[560px]">
+      <img id="amenityImage" alt="" class="absolute inset-0 w-full h-full object-cover" onerror="imgFallback(this)">
+      <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(6,43,27,.08),rgba(6,43,27,.62))"></div>
+      <div class="absolute bottom-6 left-6 right-6 text-white">
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-night-900/35 px-3 py-1.5 text-sm backdrop-blur"><i data-lucide="sparkles" class="w-4 h-4 text-gold-soft"></i> Diseñado a medida</span>
+      </div>
+    </div>
+    <div class="p-7 sm:p-9 lg:pt-12">
+      <p class="text-sm font-semibold text-teal-deep">ACCESORIOS</p>
+      <h3 id="amenityTitle" class="mt-3 text-3xl font-semibold leading-tight"></h3>
+      <p id="amenityDescription" class="mt-4 text-night-700/90 leading-relaxed" style="white-space:pre-line"></p>
+      <h4 class="mt-7 font-semibold">Detalles</h4>
+      <ul id="amenityPoints" class="mt-3 space-y-3 text-sm"></ul>
+      <img id="amenityDetailImage" alt="" class="hidden mt-6 w-full rounded-2xl border border-sand-200 bg-white object-contain" loading="lazy" decoding="async" onerror="this.onerror=null;this.classList.add('hidden')">
+      <a id="amenityWhatsApp" target="_blank" rel="noopener" class="btn-gold mt-8 w-full"><svg class="w-5 h-5" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg> Consultar por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<div id="infoModal" class="overlay" role="dialog" aria-modal="true" aria-labelledby="iTitle">
+  <div class="sheet w-full max-w-md rounded-3xl bg-white text-night-900 p-8 text-center shadow-2xl">
+    <div class="mx-auto w-14 h-14 grid place-items-center rounded-full bg-teal-caribe/15 text-teal-deep" style="background:rgba(47,165,102,.14)"><i data-lucide="check" class="w-7 h-7"></i></div>
+    <h3 id="iTitle" class="mt-4 text-3xl font-semibold"></h3>
+    <p id="iText" class="mt-2 text-night-700/80"></p>
+    <button class="close btn-gold mt-6">Entendido</button>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- ========== [BLOQUE 15] JAVASCRIPT ========== -->
+<script src="./js/home-page.js"></script>
+<script src="./js/header-session.js"></script>
+<script src="./js/cookie-consent.js" defer></script>
+</body>
+</html>

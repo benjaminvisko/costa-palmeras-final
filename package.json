@@ -1,0 +1,13 @@
+{
+  "name": "costa-palmeras",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio Costa Palmeras con API local (sin dependencias)",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "build": "node -e \"console.log('Sitio estático: sin paso de build')\"",
+    "seed": "node server/seed.js"
+  }
+}

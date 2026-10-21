@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./images/logopalmeras.png">
+  <title>Nosotros | Costa Palmeras</title>
+  <meta name="description" content="Conocé la historia, la misión, la visión y el equipo de Costa Palmeras.">
+  <meta name="theme-color" content="#FAF6F0">
+  <link rel="icon" href="./images/logopalmeras.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="./js/about-tailwind-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+  
+<link rel="stylesheet" href="./css/about.css">
+</head>
+<body>
+  <header id="nav" class="fixed inset-x-0 top-0 z-50 py-4">
+    <div class="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-4 px-5 sm:px-8 xl:gap-5">
+      <nav class="hidden items-center justify-end gap-3 xl:flex 2xl:gap-5" aria-label="Navegación izquierda">
+        <a class="nav-link" href="index.html#inicio">Inicio</a>
+        <a class="nav-link" href="#historia">Historia</a>
+      </nav>
+      <a href="index.html" class="flex shrink-0 items-center xl:justify-self-center" aria-label="Costa Palmeras, inicio">
+        <img src="./images/cropped-logo-horizontal-350x66.png" alt="Costa Palmeras" class="h-9 w-auto sm:h-11" onerror="this.style.display='none'">
+      </a>
+      <div class="flex items-center justify-end gap-3 xl:justify-between xl:gap-5">
+        <nav class="hidden items-center gap-3 xl:flex 2xl:gap-5" aria-label="Navegación derecha">
+          <a class="nav-link" href="#equipo">Equipo</a>
+          <a class="nav-link" href="index.html#contacto">Contacto</a>
+        </nav>
+        <a href="miobra.html" data-session-link class="hidden rounded-full bg-gradient-to-r from-gold-soft to-gold px-5 py-3 text-sm font-semibold text-night-900 shadow-md transition hover:-translate-y-0.5 sm:inline-flex">Iniciar sesión</a>
+        <button id="burger" class="p-2 text-teal-deep xl:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><i data-lucide="menu" class="h-6 w-6"></i></button>
+      </div>
+    </div>
+    <div id="drawer" class="hidden border-t border-night-900/10 bg-sand-50 xl:hidden">
+      <nav class="flex flex-col gap-4 px-6 py-5" aria-label="Menú móvil">
+        <a class="text-night-700" href="index.html#inicio">Inicio</a>
+        <a class="text-night-700" href="#historia">Historia</a>
+        <a class="text-night-700" href="#equipo">Equipo</a>
+        <a class="text-night-700" href="index.html#contacto">Contacto</a>
+        <a class="btn-gold mt-1 w-fit" href="miobra.html" data-session-link>Iniciar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="nosotros-hero" aria-label="Presentación de Nosotros" style="min-height:min(640px,80svh)">
+      <img class="hero-poster" src="./images/banner%20costa%20palmera.jpeg" alt="Banner de Costa Palmeras" fetchpriority="high" style="object-position:center 40%">
+      <div class="mx-auto w-full max-w-7xl px-5 pb-14 pt-32 sm:px-8 sm:pb-20">
+        <p class="text-sm font-semibold uppercase tracking-widest text-gold-soft">Nosotros</p>
+        <h1 class="mt-3 max-w-3xl text-5xl font-semibold leading-tight text-white sm:text-6xl">Conocé a las personas detrás de Costa Palmeras</h1>
+        <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/85">Más de 30 años construyendo piscinas y proyectos con compromiso, cercanía y trabajo en familia.</p>
+      </div>
+    </section>
+
+    <section class="mv-section py-16 sm:py-20" aria-label="Misión, visión y valores">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="mv-grid">
+          <article class="mv-item">
+            <span class="mv-icon" aria-hidden="true"><i data-lucide="target" class="h-5 w-5"></i></span>
+            <div class="mv-copy">
+              <div class="mv-heading"><span class="mv-index" aria-hidden="true">01</span><h2>Nuestra misión</h2></div>
+              <p>Diseñar y construir proyectos personalizados con la más alta calidad, adaptados a las necesidades de cada cliente. Buscamos mejorar constantemente, ofreciendo soluciones seguras, duraderas y un servicio cercano.</p>
+            </div>
+          </article>
+          <article class="mv-item">
+            <span class="mv-icon" aria-hidden="true"><i data-lucide="eye" class="h-5 w-5"></i></span>
+            <div class="mv-copy">
+              <div class="mv-heading"><span class="mv-index" aria-hidden="true">02</span><h2>Nuestra visión</h2></div>
+              <p>Ser una empresa líder en la construcción, reconocida por realizar proyectos innovadores y sostenibles, que mejoren la calidad de vida de nuestros clientes y contribuyan al desarrollo de las comunidades donde trabajamos.</p>
+            </div>
+          </article>
+        </div>
+        <article class="mv-item mv-values">
+          <span class="mv-icon" aria-hidden="true"><i data-lucide="handshake" class="h-5 w-5"></i></span>
+          <div class="mv-copy">
+            <div class="mv-heading"><span class="mv-index" aria-hidden="true">03</span><h2>Nuestros valores</h2></div>
+            <ul class="mv-values-list" aria-label="Valores de Costa Palmeras">
+              <li>Familia</li><li aria-hidden="true">/</li><li>Lealtad</li><li aria-hidden="true">/</li><li>Compromiso</li><li aria-hidden="true">/</li><li>Respeto</li><li aria-hidden="true">/</li><li>Superación</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="mv-section py-20 sm:py-28" id="historia">
+      <div class="mx-auto grid max-w-7xl items-start gap-12 px-5 sm:px-8 lg:grid-cols-[1.1fr_.9fr] lg:gap-20">
+        <div>
+          <p class="text-sm font-semibold uppercase text-teal-deep">Desde 1993</p>
+          <h2 class="mt-3 text-5xl font-semibold leading-tight sm:text-6xl">Somos Costa Palmeras</h2>
+          <div class="mt-7 space-y-5 leading-relaxed text-night-700/85">
+            <p>Costa Palmeras es una empresa fundada por Rodolfo Rimaulo. Sus inicios fueron como empresa constructora de piscinas y actividades afines. Entre 1993 y 2007 desarrolló su actividad en Haedo, Provincia de Buenos Aires. En 2008 comenzó su expansión al interior de la provincia y eligió Rojas como base operativa.</p>
+            <p>En 2013 comenzó a incursionar en la construcción de viviendas y emprendimientos. A partir de 2021, la empresa inició otro ciclo de crecimiento: formó un área de servicios para atender la posventa de piscinas y construcción, y un área de premoldeados dedicada a fabricar piezas para clientes internos y externos.</p>
+            <p>Este crecimiento generó nuevos puestos de trabajo y oportunidades. El equipo pasó de 7 personas en 2007 a 50 en 2023. Hoy contamos con oficina central y depósito en Rojas, además de una oficina comercial en Pergamino. Trabajamos en el norte de la provincia de Buenos Aires y el sur de provincias limítrofes, con el objetivo de seguir expandiéndonos y creciendo día a día.</p>
+          </div>
+          <div class="mt-8 flex items-center gap-4 border-t border-teal-deep/20 pt-5">
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-night-900 text-sm font-semibold text-gold-soft">CP</span>
+            <div><p class="font-semibold">Una empresa familiar</p><p class="text-sm text-night-700/70">Experiencia, trabajo y crecimiento compartido</p></div>
+          </div>
+        </div>
+        <figure class="lg:pt-12">
+          <div class="overflow-hidden rounded-2xl shadow-xl">
+            <img src="./images/imagenpabloHD.jpg" alt="Pablo Rimaulo, director de Costa Palmeras" class="aspect-[4/5] w-full object-cover object-top" onerror="this.onerror=null;this.src='./images/imagenpablo.jpg'">
+          </div>
+          <figcaption class="mt-4 flex items-center justify-between gap-4 text-sm">
+            <span class="font-semibold text-night-900">Pablo Rimaulo <span class="font-normal text-night-700/70">· Director</span></span>
+            <span class="h-px flex-1 bg-teal-deep/20"></span>
+            <span class="text-teal-deep">Rojas, Buenos Aires</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="mv-section py-20 sm:py-24" id="equipo">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="mb-12 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <p class="text-sm font-semibold uppercase text-teal-deep">Las personas detrás de cada proyecto</p>
+            <h2 class="mt-3 text-5xl font-semibold sm:text-6xl">Nuestro equipo</h2>
+          </div>
+          <p class="max-w-md leading-relaxed text-night-700/75">Áreas que trabajan en conjunto para acompañar cada etapa, desde la primera consulta hasta la entrega.</p>
+        </div>
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="text-center">
+            <div class="team-avatar mx-auto grid aspect-square w-40 place-items-center rounded-full text-4xl font-semibold text-teal-deep">VR</div>
+            <h3 class="mt-5 text-2xl font-semibold">Victorio Roggia</h3>
+            <p class="mt-1 text-sm font-medium text-teal-deep">Área comercial</p>
+          </article>
+          <article class="text-center">
+            <div class="team-avatar mx-auto grid aspect-square w-40 place-items-center rounded-full text-4xl font-semibold text-teal-deep">DO</div>
+            <h3 class="mt-5 text-2xl font-semibold">Daniela Olmedo Bargo</h3>
+            <p class="mt-1 text-sm font-medium text-teal-deep">Comunicación</p>
+          </article>
+          <article class="text-center">
+            <div class="team-avatar mx-auto grid aspect-square w-40 place-items-center rounded-full text-4xl font-semibold text-teal-deep">NM</div>
+            <h3 class="mt-5 text-2xl font-semibold">Nicomedez Martinez</h3>
+            <p class="mt-1 text-sm font-medium text-teal-deep">Área de producción</p>
+          </article>
+          <article class="text-center">
+            <div class="team-avatar mx-auto grid aspect-square w-40 place-items-center rounded-full text-4xl font-semibold text-teal-deep">CM</div>
+            <h3 class="mt-5 text-2xl font-semibold">Carolina Moreno Guerrero</h3>
+            <p class="mt-1 text-sm font-medium text-teal-deep">Administración / RR. HH.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mv-section px-5 py-16 text-center sm:px-8 sm:py-20">
+      <h2 class="text-4xl font-semibold sm:text-5xl">¿Pensamos tu próximo proyecto?</h2>
+      <a class="btn-gold mt-6" href="index.html#contacto"><i data-lucide="message-circle" class="h-5 w-5"></i> Hablemos de tu piscina</a>
+    </section>
+  </main>
+
+  <footer class="bg-night-900 py-8 text-white/75">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 text-sm sm:px-8">
+      <a href="index.html#inicio" class="font-semibold text-white">Costa Palmeras</a>
+      <p>&copy; 2026 Costa Palmeras · Rojas, Buenos Aires</p>
+      <a href="index.html#contacto" class="transition hover:text-gold-soft">Contacto</a>
+    </div>
+  </footer>
+  <script src="./js/about-page.js"></script>
+  <script src="./js/header-session.js"></script>
+  <script src="./js/cookie-consent.js" defer></script>
+</body>
+</html>

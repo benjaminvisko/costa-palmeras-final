@@ -1,0 +1,46 @@
+
+/* Estilos de servicios y accesorios */
+body { font-family:'Plus Jakarta Sans',system-ui,sans-serif; background:#dfeee4; color:#062B1B; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3 { font-family:'Cormorant Garamond',Georgia,serif; }
+    :focus-visible { outline:2px solid #FFB81C; outline-offset:3px; }
+    .service-image { aspect-ratio:1/1; object-fit:cover; }
+    .service-copy { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:1.25rem 1.25rem 1.5rem; }
+    .service-card { background: rgba(255,255,255,.94); border: 1px solid rgba(10,76,48,.12); box-shadow: 0 10px 25px rgba(6,43,27,.06); }
+    .service-card h2 { font-size: clamp(2rem, 2vw + 1rem, 3rem); }
+    .service-card p { font-size: .98rem; line-height: 1.65; }
+    .service-tabs { display:flex; flex-wrap:wrap; gap:.65rem; }
+    .service-tab { border:1px solid rgba(0,118,63,.3); border-radius:999px; background:rgba(255,255,255,.75); color:#145A38; padding:.7rem 1.15rem; font-size:.9rem; font-weight:600; transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease; }
+    .service-tab:hover { border-color:#00763F; transform:translateY(-1px); }
+    .service-tab[aria-selected="true"] { border-color:#00763F; background:#00763F; color:#fff; }
+    .service-panel { animation:servicePanelIn .35s ease both; }
+    .service-placeholder { display:grid; min-height:260px; aspect-ratio:1/1; place-items:center; overflow:hidden; background-color:#bcd8c8; background-image:linear-gradient(135deg,rgba(6,43,27,.2),rgba(47,165,102,.08)),repeating-linear-gradient(0deg,transparent 0 39px,rgba(255,255,255,.24) 40px 42px),repeating-linear-gradient(90deg,transparent 0 39px,rgba(255,255,255,.24) 40px 42px); color:#145A38; }
+    .service-placeholder.reforms { background-color:#c5d9cd; background-image:linear-gradient(135deg,rgba(6,43,27,.25),rgba(47,165,102,.12)),radial-gradient(ellipse at 70% 70%,rgba(255,255,255,.55),transparent 55%); }
+    .service-placeholder.postventa { background-color:#d2e2d6; background-image:linear-gradient(135deg,rgba(6,43,27,.18),rgba(47,165,102,.08)),radial-gradient(ellipse at 30% 30%,rgba(255,255,255,.65),transparent 55%); }
+    .service-placeholder svg { width:4rem; height:4rem; padding:1rem; border-radius:1.25rem; background:rgba(255,255,255,.78); }
+    .coating-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:1.25rem; }
+    .coating-card { min-width:0; }
+    .product-gallery { position:relative; overflow:hidden; aspect-ratio:16/10; background:#c5d9cd; }
+    .product-gallery-track { display:flex; width:100%; height:100%; transition:transform .45s ease; }
+    .product-gallery-track img { display:block; flex:0 0 100%; width:100%; height:100%; object-fit:cover; }
+    .product-gallery-arrow { position:absolute; top:50%; display:grid; width:40px; height:40px; place-items:center; transform:translateY(-50%); border:1px solid rgba(6,43,27,.18); border-radius:50%; background:rgba(255,255,255,.94); color:#145A38; box-shadow:0 4px 14px rgba(0,0,0,.15); }
+    .product-gallery-arrow:hover { background:#fff; }
+    .product-gallery-arrow.prev { left:.75rem; }
+    .product-gallery-arrow.next { right:.75rem; }
+    .product-gallery-count { position:absolute; right:.75rem; bottom:.75rem; border-radius:999px; background:rgba(6,43,27,.78); color:#fff; padding:.3rem .65rem; font-size:.75rem; font-variant-numeric:tabular-nums; }
+    @keyframes servicePanelIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+    .btn-outline { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; border:1px solid rgba(0,118,63,.55); border-radius:999px; padding:.7rem 1.2rem; color:#00763F; font-size:.9rem; font-weight:600; transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease; }
+    .btn-outline:hover { background:#00763F; border-color:#00763F; color:#fff; transform:translateY(-2px); }
+    .service-shell { background: linear-gradient(180deg, rgba(120, 167, 138, 0.32) 0%, rgba(202, 224, 208, 0.5) 100%); }
+    @media (min-width:768px) {
+      .service-image { min-height:260px; }
+      .service-copy { padding:1.6rem 2rem 1.8rem; }
+      .service-card { min-height: 280px; }
+    }
+    @media (min-width:768px) {
+      .coating-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .product-gallery-track { transition:none; }
+    }
+    .btn-gold { display:inline-flex; align-items:center; justify-content:center; gap:.55rem; padding:.85rem 1.5rem; border-radius:999px; background:linear-gradient(135deg,#FFD27A,#FFB81C); color:#062B1B; font-weight:600; transition:transform .25s ease; }
+    .btn-gold:hover { transform:translateY(-2px); }
